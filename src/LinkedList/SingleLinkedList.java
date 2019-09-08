@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Stack;
 
 public class SingleLinkedList {
-     Node headNode=new Node();//头结点
-     Node temp;//设一个过渡节点，初始为头结点
+     Node headNode=new Node();//头节点
+     Node temp;//设一个过渡节点，初始为头节点
 
 
 
-    //获取头结点
+    //获取头节点
     public Node getHeadNode(){
         return this.headNode;
     }
@@ -27,6 +27,7 @@ public class SingleLinkedList {
         while (true){
             //判断过渡节点的next域是否为空
             if (temp.next==null){
+                //将node加入链表
                 temp.next=node;
                 break;//找到next域为空的节点，便退出循环
             }else {
@@ -269,40 +270,40 @@ public class SingleLinkedList {
 
 
 
-    public static void main(String[] args) {
-        //生成无序列表1
-        SingleLinkedList singleLinkedList1=new SingleLinkedList();
-        singleLinkedList1.addNode(new  Node(1,"1号节点"));
-        singleLinkedList1.addNode(new  Node(9,"9号节点"));
-        singleLinkedList1.addNode(new  Node(2,"2号节点"));
-        singleLinkedList1.addNode(new  Node(4,"4号节点"));
-        System.out.println("**********无序链表1");
-        singleLinkedList1.show();
+        public static void main(String[] args) {
+            //生成无序列表1
+            SingleLinkedList singleLinkedList1=new SingleLinkedList();
+            singleLinkedList1.addNode(new  Node(1,"1号节点"));
+            singleLinkedList1.addNode(new  Node(9,"9号节点"));
+            singleLinkedList1.addNode(new  Node(2,"2号节点"));
+            singleLinkedList1.addNode(new  Node(4,"4号节点"));
+            System.out.println("**********无序链表1");
+            singleLinkedList1.show();
 
-        //序列化无序链表1
-        SingleLinkedList linkedList1 = singleLinkedList1.formatLinkedList(singleLinkedList1);
-        System.out.println("**********有序链表1");
-        linkedList1.show();
+            //序列化无序链表1
+            SingleLinkedList linkedList1 = singleLinkedList1.formatLinkedList(singleLinkedList1);
+            System.out.println("**********有序链表1");
+            linkedList1.show();
 
-        //生成无序列表2
-        SingleLinkedList singleLinkedList2=new SingleLinkedList();
-        singleLinkedList2.addNode(new  Node(2,"2号节点"));
-        singleLinkedList2.addNode(new  Node(9,"9号节点"));
-        singleLinkedList2.addNode(new  Node(6,"6号节点"));
-        singleLinkedList2.addNode(new  Node(1,"1号节点"));
-        System.out.println("**********无序链表2");
-        singleLinkedList2.show();
+            //生成无序列表2
+            SingleLinkedList singleLinkedList2=new SingleLinkedList();
+            singleLinkedList2.addNode(new  Node(2,"2号节点"));
+            singleLinkedList2.addNode(new  Node(9,"9号节点"));
+            singleLinkedList2.addNode(new  Node(6,"6号节点"));
+            singleLinkedList2.addNode(new  Node(1,"1号节点"));
+            System.out.println("**********无序链表2");
+            singleLinkedList2.show();
 
-        //序列化无序链表2
-        SingleLinkedList linkedList2 = singleLinkedList2.formatLinkedList(singleLinkedList2);
-        System.out.println("**********有序链表2");
-        linkedList2.show();
+            //序列化无序链表2
+            SingleLinkedList linkedList2 = singleLinkedList2.formatLinkedList(singleLinkedList2);
+            System.out.println("**********有序链表2");
+            linkedList2.show();
 
 
-        //合并两个有序列表，用哪个对象都行
-        SingleLinkedList list = linkedList1.compound2LinkedList(linkedList1, linkedList2);
-        System.out.println("**************合并后的链表");
-        list.show();
+            //合并两个有序列表，用哪个对象都行
+            SingleLinkedList list = linkedList1.compound2LinkedList(linkedList1, linkedList2);
+            System.out.println("**************合并后的链表");
+            list.show();
 
 
 //        System.out.println(nodes);
@@ -352,9 +353,8 @@ public class SingleLinkedList {
 
 //
 
+        }
 
-
-    }
 
 }
 

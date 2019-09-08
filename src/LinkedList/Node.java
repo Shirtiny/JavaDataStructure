@@ -5,6 +5,7 @@ public class Node {
     int id;
     String name;
     Node next;
+    Node pre;//pre，单链表不用
 
     @Override
     public String toString() {
@@ -38,6 +39,14 @@ public class Node {
         this.next = next;
     }
 
+    public Node getPre() {
+        return pre;
+    }
+
+    public void setPre(Node pre) {
+        this.pre = pre;
+    }
+
     public Node(int id, String name) {
         this.id = id;
         this.name = name;
@@ -47,6 +56,13 @@ public class Node {
         this.id = id;
         this.name = name;
         this.next = next;
+    }
+
+    public Node(int id, String name, Node next, Node pre) {
+        this.id = id;
+        this.name = name;
+        this.next = next;
+        this.pre = pre;
     }
 
     public Node() {
