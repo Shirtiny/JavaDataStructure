@@ -20,7 +20,6 @@ public class SingleCircleLinkedList {
                 node.setNext(first);//构造环形
                 break;
             }
-
         }
     }
 
