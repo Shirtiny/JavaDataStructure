@@ -1,6 +1,7 @@
 package Sort;
 
 import java.util.Arrays;
+import java.util.Date;
 
 public class BubbleSorting {
 
@@ -31,10 +32,23 @@ public class BubbleSorting {
                     //把isChanged改回来
                     isChanged=false;
                 }
-                System.out.println(Arrays.toString(array));
+//                System.out.println(Arrays.toString(array));
 
         }
         return array;
+    }
+
+
+    //把10万个随机数排序，测试耗时
+    public void ohtTest() {
+
+        int[] ohtArray = new int[100000];
+        for (int i=0;i<ohtArray.length;i++) {
+            ohtArray[i] = (int) (Math.random()* 100000) ;
+        }
+        System.out.println(new Date());
+        bubbleSort(ohtArray);
+        System.out.println(new Date());
     }
 }
 
@@ -43,6 +57,7 @@ class BubbleSortingTest {
         int[] arr = {5, 7, 4, 6, 3, 1, 2, 9, 8};
         BubbleSorting bubbleSorting = new BubbleSorting();
         int[] sorted = bubbleSorting.bubbleSort(arr);
+        bubbleSorting.ohtTest();
 
     }
 }
