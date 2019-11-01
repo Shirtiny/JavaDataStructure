@@ -93,7 +93,7 @@ public class FibonacciSearch {
 class FibonacciSearchTest {
     public static void main(String[] args) {
         FibonacciSearch fibonacciSearch = new FibonacciSearch();
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8};
-        fibonacciSearch.fibonacciSearch(array, 2);
+        int[] array = {1, 2, 11, 23, 34, 78, 123, 234};
+        fibonacciSearch.fibonacciSearch(array, 123);
     }
 }
